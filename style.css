@@ -103,3 +103,42 @@ button:hover{
     color: white;
     background-color: rgb(114, 114, 230);
 }
+
+
+
+
+@media (max-width: 768px){
+    main{
+    min-width: 100%;
+    }
+    .navlinks{
+        font-size: 14px;
+    }
+    .logo{
+        font-size: 20px;
+    }
+    .navlinks{
+        margin: 10px;
+        gap: 10px;
+    }
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: 30px 10px
+    }
+    .card{
+        width: 180px;
+        height: 190px;
+        gap: 10px;
+    }
+    p{
+        font-size: 8px;
+        margin-bottom: 2px;
+    }
+    button{
+        border-radius: 6px;
+        font-size: 6px;
+        padding: 4px 4px;
+    }
+}
