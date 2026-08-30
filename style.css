@@ -1,3 +1,7 @@
+:root{
+    --background: #090909;
+    --effects: #D4AF37;
+}
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +9,7 @@
     font-family: Arial, sans-serif;
 }
 body{
-    background-color: black;
+    background-color: var(--background);
     color: white;
 }
 header{
@@ -16,21 +20,21 @@ header{
 main{
     min-width: 100vh;
     max-width: 1400px;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 .logo{
-    color: white;
+    color: var(--effects);
     font-size: 34px;
 }
 .logo:hover{
-    color: #00ffff;
+    color: #D4AF37;
     text-shadow: 
-    0 0 35px #00ffff,
-    0 0 45px #00ffff,
-    0 0 55px #00ffff,
-    0 0 65px #00ffff;
+    0 0 35px #D4AF37,
+    0 0 45px #D4AF37,
+    0 0 55px #D4AF37,
+    0 0 65px #D4AF37;
     transform: translateY(-4px);
-    transition: all .8s ease;
+    transition: all .9s ease;
 }
 .navlinks{
     display: flex;
@@ -47,13 +51,59 @@ a{
     color: white;
 }
 a:hover{
-    color: #00ffff;
+    color: #D4AF37;
     text-shadow: 
-    0 0 20px #00ffff,
-    0 0 25px #00ffff,
-    0 0 30px #00ffff,
-    0 0 35px #00ffff;
+    0 0 20px #D4AF37,
+    0 0 25px #D4AF37,
+    0 0 30px #D4AF37,
+    0 0 35px #D4AF37;
 }
+.textarea{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 450px;
+    gap: 10px;
+}
+.text h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #D4AF37;
+}
+.text p{
+    font-size: 18px;
+    margin: 10px;
+
+}
+.image{
+    background-image: url(https://10wallpaper.com/wallpaper/1366x768/1303/2014_Ferrari_LaFerrari_Auto_HD_Desktop_Wallpaper_03_1366x768.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px 0px 0px 16px;
+}
+.soclinks{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+    text-decoration: none;
+    list-style-type: none;
+}
+.soclinks a{
+    color: #000;
+}
+.soclinks a:hover{
+    color: var(--effects);
+}
+
+
+
+
+
+
+
+
+
 
 .card-container{
     display: flex;
@@ -108,8 +158,11 @@ button:hover{
 
 
 @media (max-width: 768px){
+    header{
+        padding: 8px
+    }
     main{
-    min-width: 100%;
+        min-width: 100%;
     }
     .navlinks{
         font-size: 14px;
@@ -122,23 +175,21 @@ button:hover{
         gap: 10px;
     }
     .card-container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        gap: 30px 10px
+        flex-direction: column;
+        gap: 30px;
     }
     .card{
-        width: 180px;
-        height: 190px;
+        width: 280px;
+        height: 290px;
         gap: 10px;
     }
     p{
-        font-size: 8px;
-        margin-bottom: 2px;
+        font-size: 12px;
+
     }
     button{
-        border-radius: 6px;
-        font-size: 6px;
+        border-radius: 4px;
+        font-size: 10px;
         padding: 4px 4px;
     }
 }
