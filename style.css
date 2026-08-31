@@ -34,7 +34,6 @@ main{
 }
 .logo img{
     width: 150px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,7 +82,6 @@ header button:hover{
     background-color: var(--accent-red-light);
     transition: all .3s ease;
 }
-
 .textarea{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -101,7 +99,6 @@ header button:hover{
 .text p{
     font-size: 18px;
     margin: 15px;
-
 }
 .image{
     background-image: url(https://10wallpaper.com/wallpaper/1366x768/1303/2014_Ferrari_LaFerrari_Auto_HD_Desktop_Wallpaper_03_1366x768.jpg);
@@ -140,7 +137,6 @@ h2{
     text-align: center;
     color: var(--gold);
     margin-bottom: 80px;
-
 }
 .card-container{
     display: flex;
@@ -196,7 +192,23 @@ p{
     transition: all .3s ease;
 }
 
+/*MOVIE AREA SECTION*/
+h3{
+    margin: 80px;
+    text-align: center;
+    color: var(--gold);
+}
+.moviearea{
+    margin: 80px;
 
+}
+.movie{
+    display: block;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+}
 
 /*MOBILE VERSION 768PX*/
 @media (max-width: 768px){
