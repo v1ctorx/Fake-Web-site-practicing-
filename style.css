@@ -9,6 +9,7 @@
     --text-dark: #1A1A1A;
     --card-bg: #F5F1E8;
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -187,7 +188,6 @@ p{
 /*MOVIE AREA SECTION*/
 .moviearea{
     margin: 80px;
-
 }
 .movie{
     display: block;
@@ -228,10 +228,10 @@ p{
     font-size: 10px;
     }
     .soclinks{
-    display: flex;
-    justify-content: space-between;
-    margin: 5px;
-    margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+        margin-top: 8px;
     }
     .soclinks a{
         border-radius: 50%;
