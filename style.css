@@ -1,16 +1,26 @@
 :root{
-    --background: #090909;
-    --effects: #D4AF37;
+    --background: #0D0B08;
+    --background-alt: #141210;
+    --gold: #D4AF37;
+    --gold-light: #F0CC5C;
+    --accent-red: #8B1E1E;
+    --accent-red-light: #A82A2A;
+    --text-primary: #E8E4DA;
+    --text-dark: #1A1A1A;
+    --card-bg: #F5F1E8;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
 }
 body{
     background-color: var(--background);
-    color: white;
+    color: var(--text-primary);
 }
 header{
     display: flex;
@@ -20,27 +30,25 @@ header{
 main{
     min-width: 100vh;
     max-width: 1400px;
-    margin-top: 80px;
+    margin-top: 40px;
 }
-.logo{
-    color: var(--effects);
-    font-size: 34px;
+.logo img{
+    width: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.logo:hover{
-    color: #D4AF37;
-    text-shadow: 
-    0 0 35px #D4AF37,
-    0 0 45px #D4AF37,
-    0 0 55px #D4AF37,
-    0 0 65px #D4AF37;
-    transform: translateY(-4px);
-    transition: all .9s ease;
+.logo img:hover{
+    transform: translateY(-1px);
+    transition: all 0.9s ease;
 }
+
 .navlinks{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 25px;
     gap: 20px;
 }
 .navlinks li{
@@ -48,30 +56,51 @@ main{
 }
 a{
     text-decoration: none;
-    color: white;
+    color: var(--text-primary);
 }
 a:hover{
-    color: #D4AF37;
+    color: var(--gold-light);
     text-shadow: 
-    0 0 20px #D4AF37,
-    0 0 25px #D4AF37,
-    0 0 30px #D4AF37,
-    0 0 35px #D4AF37;
+    0 0 20px var(--gold),
+    0 0 25px var(--gold),
+    0 0 30px var(--gold),
+    0 0 35px var(--gold);
 }
+
+/* HEADER CONTACT BUTTON */
+header button{
+    border: 1px solid var(--accent-red);
+    border-radius: 8px;
+    padding: 8px 18px;
+    background-color: var(--accent-red);
+    color: var(--text-primary);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+header button:hover{
+    background-color: var(--accent-red-light);
+    transition: all .3s ease;
+}
+
 .textarea{
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 450px;
     gap: 10px;
+    margin-bottom: 80px;
 }
 .text h1{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
     text-align: center;
-    color: #D4AF37;
+    color: var(--gold);
 }
 .text p{
     font-size: 18px;
-    margin: 10px;
+    margin: 15px;
 
 }
 .image{
@@ -90,21 +119,29 @@ a:hover{
     list-style-type: none;
 }
 .soclinks a{
-    color: #000;
+    color: var(--text-dark);
+    background-color: var(--gold);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .soclinks a:hover{
-    color: var(--effects);
+    background-color: var(--gold-light);
+    color: var(--text-dark);
 }
 
+/*CARD PART*/
+h2{
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    color: var(--gold);
+    margin-bottom: 80px;
 
-
-
-
-
-
-
-
-
+}
 .card-container{
     display: flex;
     justify-content: space-between;
@@ -115,10 +152,10 @@ a:hover{
 .card{
     width: 350px;
     height: 280px;
-    background-color: white;
-    color: black;
+    background-color: var(--card-bg);
+    color: var(--text-dark);
     border-radius: 16px;
-    box-shadow: 10px 20px 32px rgba(253, 253, 253, 0.4);
+    box-shadow: 10px 20px 32px rgba(212, 175, 55, 0.15);
     cursor: pointer;
 }
 .card:hover{
@@ -141,22 +178,27 @@ p{
     font-size: 12px;
     margin-bottom: 10px;
 }
-button{
-    border: 1px solid #000;
+.card button{
+    border: 1px solid var(--accent-red);
     border-radius: 8px;
     margin-top: 4px;
-    font-size: 8px;
-    padding: 6px 8px;
-    background-color: rgb(184, 184, 237);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 10px;
+    padding: 6px 10px;
+    background-color: var(--accent-red);
+    color: var(--text-primary);
+    cursor: pointer;
 }
-button:hover{
-    color: white;
-    background-color: rgb(114, 114, 230);
+.card button:hover{
+    background-color: var(--accent-red-light);
+    transition: all .3s ease;
 }
 
 
 
-
+/*MOBILE VERSION 768PX*/
 @media (max-width: 768px){
     header{
         padding: 8px
@@ -185,7 +227,6 @@ button:hover{
     }
     p{
         font-size: 12px;
-
     }
     button{
         border-radius: 4px;
