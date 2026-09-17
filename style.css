@@ -1,4 +1,4 @@
-:root{
+:root {
     --background: #0D0B08;
     --background-alt: #141210;
     --gold: #D4AF37;
@@ -10,7 +10,7 @@
     --card-bg: #F5F1E8;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,99 +18,241 @@
     text-decoration: none;
     list-style-type: none;
 }
-html{
+
+/* Light mode created after because I started to code the website all black */
+.light-mode {
+    color: black;
+    background-color: #FAF8F3;
+
+    .navlinks a {
+        color: black;
+    }
+
+    .logo img {
+        background-image: url("img/light logo.png");
+        background-size: cover;
+    }
+
+    .text h1 {
+        color: #171717;
+    }
+
+    .text p {
+        color: #5F5A52;
+    }
+
+    .btn-story {
+        color: #1C1C1C;
+        border-color: #B9AE9D;
+    }
+
+    footer {
+        background-color: #EEEAE2;
+    }
+
+    .contentfooter img {
+        background-image: url("img/light logo.png");
+    }
+
+    .socialfooter a {
+        color: black;
+    }
+
+    .direciton {
+        color: black;
+    }
+}
+
+html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     background-color: var(--background);
     color: var(--text-primary);
+    transition: 0.4s;
 }
-header{
+
+header {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-main{
+
+main {
     min-width: 100vh;
     max-width: 1400px;
     margin-top: 40px;
 }
-.logo img{
+
+.logo img {
     width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
-.logo img:hover{
+
+.logo img:hover {
     transform: translateY(-1px);
     transition: all 0.9s ease;
 }
-.navlinks{
+
+.navlinks {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 25px;
     gap: 20px;
 }
-.navlinks a{
+
+.navlinks a {
+    font-size: 15px;
     color: var(--text-primary);
-}
-.navlinks a:hover{
-    color: var(--gold-light);
-    text-shadow: 
-    0 0 20px var(--gold),
-    0 0 25px var(--gold),
-    0 0 30px var(--gold),
-    0 0 35px var(--gold);
 }
 
-/* HEADER CONTACT BUTTON */
+.navlinks a:hover {
+    color: var(--gold-light);
+    text-shadow:
+        0 0 20px var(--gold),
+        0 0 25px var(--gold),
+        0 0 30px var(--gold),
+        0 0 35px var(--gold);
+}
+
 .btn{
-    border: 1px solid var(--accent-red);
-    border-radius: 8px;
-    padding: 8px 18px;
-    background-color: var(--accent-red);
-    color: var(--text-primary);
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    cursor: pointer;
+    font-size: 15px;
 }
+
 .btn:hover {
-    background-color: var(--accent-red-light);
+    cursor: pointer;
+    color: var(--gold-light);
+    text-shadow:
+        0 0 20px var(--gold),
+        0 0 25px var(--gold),
+        0 0 30px var(--gold),
+        0 0 35px var(--gold);
 }
-.textarea{
+
+/* HERO SECTION */
+
+.textarea {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 450px;
+    min-height: 575px;
     gap: 10px;
     margin-bottom: 150px;
 }
-.text h1{
-    font-family: 'Rajdhani', sans-serif;
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+}
+
+.hero-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    color: var(--gold);
+    font-size: 12px;
     font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.hero-label::before {
+    content: "";
+    width: 38px;
+    height: 2px;
+    background-color: var(--gold);
+}
+
+.text h1 {
+    max-width: 650px;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: clamp(48px, 5vw, 75px);
+    font-weight: 700;
+    line-height: 1.05;
     letter-spacing: 1px;
-    text-align: center;
+    text-align: left;
+}
+
+.text h1 span {
+    display: block;
     color: var(--gold);
 }
-.text p{
+
+.text p {
+    max-width: 540px;
+    margin: 0 0 32px;
+    color: var(--text-primary);
     font-size: 18px;
-    margin: 15px;
+    line-height: 1.7;
 }
-.image{
-    background-image: url(https://10wallpaper.com/wallpaper/1366x768/1303/2014_Ferrari_LaFerrari_Auto_HD_Desktop_Wallpaper_03_1366x768.jpg);
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hero-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-explore {
+    background-color: var(--gold);
+    color: var(--text-dark);
+    box-shadow: 0 10px 24px rgba(212, 175, 55, 0.25);
+}
+
+.btn-explore:hover {
+    background-color: var(--gold-light);
+    transform: translateY(-3px);
+}
+
+.btn-story {
+    color: var(--text-primary);
+    border: 1px solid var(--gold);
+    background-color: transparent;
+}
+
+.btn-story:hover {
+    color: var(--text-dark);
+    background-color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.image {
+    background-image: url("https://10wallpaper.com/wallpaper/1366x768/1303/2014_Ferrari_LaFerrari_Auto_HD_Desktop_Wallpaper_03_1366x768.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 16px 0px 0px 16px;
+    background-position: center;
+    border-radius: 16px 0 0 16px;
 }
-.soclinks{
+
+.soclinks {
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 10px;
     margin-top: 8px;
 }
-.soclinks a{
+
+.soclinks a {
     color: var(--text-dark);
     background-color: var(--gold);
     border-radius: 50%;
@@ -120,13 +262,15 @@ main{
     align-items: center;
     justify-content: center;
 }
-.soclinks a:hover{
+
+.soclinks a:hover {
     background-color: var(--gold-light);
     color: var(--text-dark);
 }
 
-/*CARD PART*/
-.card-container{
+/* CARD PART */
+
+.card-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -134,7 +278,8 @@ main{
     margin: 10px;
     margin-bottom: 180px;
 }
-.card{
+
+.card {
     width: 350px;
     height: 280px;
     background-color: var(--card-bg);
@@ -143,27 +288,33 @@ main{
     box-shadow: 10px 20px 32px rgba(212, 175, 55, 0.15);
     cursor: pointer;
 }
-.card:hover{
+
+.card:hover {
     transform: translateY(-10px);
-    transition: all .8s ease;
+    transition: all 0.8s ease;
 }
-img{
+
+img {
     width: 100%;
     border-radius: 16px;
     background-repeat: no-repeat;
     background-size: contain;
 }
-img:hover{
+
+img:hover {
     opacity: 95%;
 }
-.content-card{
+
+.content-card {
     margin: 10px;
 }
-p{
+
+p {
     font-size: 12px;
     margin-bottom: 10px;
 }
-.card button{
+
+.card button {
     border: 1px solid var(--accent-red);
     border-radius: 8px;
     margin-top: 4px;
@@ -176,53 +327,65 @@ p{
     color: var(--text-primary);
     cursor: pointer;
 }
-.card button:hover{
+
+.card button:hover {
     background-color: var(--accent-red-light);
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
-/*MOVIE AREA SECTION*/
-.moviearea{
+/* MOVIE AREA SECTION */
+
+.moviearea {
     margin: 150px;
 }
-.movie{
+
+.movie {
     display: block;
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
     border-radius: 16px;
 }
-footer{
+
+footer {
     background-color: var(--background-alt);
     height: 150px;
 }
-.contentfooter img{
+
+.contentfooter img {
+    cursor: pointer;
     width: 200px;
 }
-.contentfooter img:hover{
+
+.contentfooter img:hover {
     transform: translateY(-1px);
     transition: all 0.9s ease;
 }
-.contentfooter{
+
+.contentfooter {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 24px;
 }
+
 .socialfooter {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px
+    gap: 30px;
 }
-.socialfooter a{
+
+.socialfooter a {
     color: #F5F1E8;
 }
-.socialfooter a:hover{
+
+.socialfooter a:hover {
     color: #D4AF37;
     transition: all 0.3s ease;
 }
-.direciton{
+
+.direciton {
     font-family: 'Rajdhani', sans-serif;
     color: var(--text-primary);
     display: flex;
@@ -231,71 +394,110 @@ footer{
     gap: 10px;
 }
 
-/*MOBILE VERSION 768PX*/
-@media (max-width: 768px){
-    header{
-        padding: 8px
+/* MOBILE VERSION 768PX */
+
+@media (max-width: 768px) {
+    header {
+        padding: 8px;
     }
-    main{
+
+    main {
         min-width: 100%;
     }
-    .logo img{
+
+    .logo img {
         width: 80px;
     }
-    .navlinks{
+
+    .navlinks {
         font-size: 12px;
-    }
-    .navlinks{
         margin: 10px;
-        gap: 10px;
+        gap: 20px;
     }
-    .btn{
-        padding: 5px 9px;
+
+    .btn {
+        font-size: 15px;
     }
-    .textarea{
-        height: auto;
+
+    .textarea {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 35px;
         margin-bottom: 60px;
     }
-    .text h1{
-        font-size: 16px;
+
+    .text {
+        padding: 45px 25px 0;
     }
-    .text p{
+
+    .hero-label {
         font-size: 10px;
+        letter-spacing: 2px;
     }
-    .soclinks{
+
+    .text h1 {
+        font-size: 45px;
+    }
+
+    .text p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+
+    .image {
+        min-height: 400px;
+        border-radius: 0 0 16px 16px;
+    }
+
+    .soclinks {
         margin: 10px;
         margin-top: 8px;
     }
-    .soclinks a{
+
+    .soclinks a {
         border-radius: 50%;
         width: 20px;
         height: 20px;
         font-size: 10px;
     }
-    .card-container{
+
+    .card-container {
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;
         margin: 0 20px 150px;
         gap: 35px;
     }
-    .card{
+
+    .card {
         width: 100%;
         max-width: 350px;
         height: 350px;
     }
-    p{
+
+    p {
         font-size: 15px;
     }
-    button{
+
+    button {
         border-radius: 4px;
         font-size: 10px;
-        padding: 4px 4px;
+        padding: 4px;
     }
+
     .moviearea {
         margin: 150px 0;
         padding: 0 10px;
     }
+
     .movie {
         display: block;
         width: 100%;
@@ -303,17 +505,16 @@ footer{
         height: auto;
         margin: 0 auto;
     }
-} 
+}
 
-
-/*SORRY PAGE*/
-.sorry body{
+.sorry body {
     min-height: 100vh;
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;     
+    align-items: center;
 }
-.boddy{
+
+.boddy {
     background-color: white;
 }
