@@ -19,8 +19,10 @@
     list-style-type: none;
 }
 
-/* Light mode created after because I started to code the website all black */
 
+
+
+/* Light mode created after because I started to code the website all black */
 .light-mode {
     color: black;
     background-color: #FAF8F3;
@@ -64,6 +66,11 @@
     }
 }
 
+
+
+
+
+/*PAGE*/
 html {
     scroll-behavior: smooth;
 }
@@ -73,7 +80,7 @@ body {
     color: var(--text-primary);
     transition: 0.4s;
 }
-
+/*CABEÇALHO*/
 header {
     display: flex;
     justify-content: space-around;
@@ -86,6 +93,7 @@ main {
     margin-top: 40px;
 }
 
+/*LOGO DO CABEÇALHO*/
 .logo img {
     width: 150px;
     display: flex;
@@ -99,6 +107,7 @@ main {
     transition: all 0.9s ease;
 }
 
+/*LINKS DA BARRA DE NAVEGAÇÃO*/
 .navlinks {
     display: flex;
     justify-content: center;
@@ -119,11 +128,10 @@ main {
         0 0 30px var(--gold),
         0 0 35px var(--gold);
 }
-
+/*BOTÃO*/
 .btn {
     font-size: 15px;
 }
-
 .btn:hover {
     cursor: pointer;
     color: var(--gold-light);
@@ -134,8 +142,7 @@ main {
         0 0 35px var(--gold);
 }
 
-/* HERO SECTION */
-
+/* HERO SECTION - SESSÕES */
 .textarea {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -268,8 +275,7 @@ main {
     color: var(--text-dark);
 }
 
-/* CARD PART */
-
+/* CARD PART  - SESSÃO DOS CARDS */
 .card-container {
     display: flex;
     justify-content: space-between;
@@ -333,8 +339,7 @@ p {
     transition: all 0.3s ease;
 }
 
-/* MOVIE AREA SECTION */
-
+/* MOVIE AREA SECTION - SESSÃO DO FILME (YOUTUBE) */
 .moviearea {
     margin: 150px;
 }
@@ -346,7 +351,7 @@ p {
     margin: 0 auto;
     border-radius: 16px;
 }
-
+/*RODA PÉ*/
 footer {
     background-color: var(--background-alt);
     height: 150px;
@@ -384,7 +389,7 @@ footer {
     color: #D4AF37;
     transition: all 0.3s ease;
 }
-
+/*DIREITOS RESERVADOS*/
 .direciton {
     font-family: 'Rajdhani', sans-serif;
     color: var(--text-primary);
@@ -394,8 +399,7 @@ footer {
     gap: 10px;
 }
 
-/* MOBILE VERSION 768PX */
-
+/* MOBILE VERSION 768PX  - VERSÃO MOBILE/ CELULAR*/
 @media (max-width: 768px) {
     header {
         padding: 8px;
@@ -410,13 +414,13 @@ footer {
     }
 
     .navlinks {
-        font-size: 12px;
+        font-size: 15px;
         margin: 10px;
-        gap: 15px;
+        gap: 25px;
     }
 
     .btn {
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .textarea {
