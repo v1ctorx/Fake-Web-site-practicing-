@@ -16,12 +16,12 @@ buttond.addEventListener("click", function(){
     });
 });
 
-const buttonb = document.querySelector("#movieB");
-const movie = document.querySelector("#movieS");
+const buttonmovie = document.querySelector("#movieButton");
+const movieSection = document.querySelector("#documentary");
 
-buttonb.addEventListener("click", function(){
+buttonmovie.addEventListener("click", function(){
 
-    carsSection.scrollIntoView({
+    movieSection.scrollIntoView({
         behavior: "smooth"
     });
 });

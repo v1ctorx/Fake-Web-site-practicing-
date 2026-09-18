@@ -21,7 +21,6 @@
 
 
 
-
 /* Light mode created after because I started to code the website all black */
 .light-mode {
     color: black;
@@ -276,6 +275,14 @@ main {
     color: var(--text-dark);
 }
 
+
+h2 {
+    font-size: 25px;
+    text-align: center;
+    color: var(--gold);
+    margin-bottom: 50px;
+}
+
 /* CARD PART  - SESSÃO DOS CARDS */
 .card-container {
     display: grid;
@@ -340,6 +347,12 @@ p {
     transition: all 0.3s ease;
 }
 
+h3 {
+    font-size: 25px;
+    text-align: center;
+    color: var(--gold);
+    margin-bottom: 50px;
+}
 /* MOVIE AREA SECTION - SESSÃO DO FILME (YOUTUBE) */
 .moviearea {
     margin: 150px;
