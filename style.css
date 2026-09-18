@@ -295,7 +295,7 @@ h2 {
 
 .card {
     width: 310px;
-    height: 300px;
+    height: 320px;
     background-color: var(--card-bg);
     color: var(--text-dark);
     border-radius: 16px;
@@ -306,6 +306,8 @@ h2 {
 .card:hover {
     transform: translateY(-10px);
     transition: all 0.8s ease;
+}
+.card img{
 }
 
 img {
@@ -353,6 +355,9 @@ h3 {
     color: var(--gold);
     margin-bottom: 50px;
 }
+
+
+
 /* MOVIE AREA SECTION - SESSÃO DO FILME (YOUTUBE) */
 .moviearea {
     margin: 150px;
@@ -506,7 +511,7 @@ footer {
     .card {
         width: 100%;
         max-width: 350px;
-        height: 350px;
+        height: 380px;
     }
 
     p {
