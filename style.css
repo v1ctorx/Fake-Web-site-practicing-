@@ -554,16 +554,151 @@ footer {
 }
 }
 
-/* SORRY PAGE */
 
-.sorry body {
-    min-height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+
+/*This is responsable fro the second page and page cars summary technical history*/
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 0;
+    font-family: "Orbitron", sans-serif;
 }
 
-.boddy {
-    background-color: white;
+main section {
+    padding: 50px 0;
+    border-bottom: 1px solid #3a342b;
+}
+
+main section:last-child {
+    border-bottom: none;
+}
+
+main h1,
+main h2 {
+    margin-bottom: 30px;
+    color: #f0cc5c;
+    font-size: 32px;
+    line-height: 1.3;
+}
+
+main .negrito {
+    margin: 28px 0 12px;
+    color: #d4af37;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+main .summarymr2 {
+    margin-bottom: 14px;
+    color: #e8e4da;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+main .summarytecnical {
+    width: 100%;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+main table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+    background-color: #141210;
+}
+
+main th,
+main td {
+    padding: 14px;
+    border: 1px solid #3a342b;
+    text-align: left;
+}
+
+main th {
+    background-color: #d4af37;
+    color: #1a1a1a;
+    font-size: 13px;
+}
+
+main td {
+    color: #e8e4da;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+main td:first-child {
+    color: #f0cc5c;
+}
+
+/* MAIN PAGE - LIGHT MODE */
+
+body.light-mode main section {
+    border-bottom-color: #d4cec3;
+}
+
+body.light-mode main h1,
+body.light-mode main h2 {
+    color: #171717;
+}
+
+body.light-mode main .negrito {
+    color: #80640c;
+}
+
+body.light-mode main .summarymr2 {
+    color: #5f5a52;
+}
+
+body.light-mode main table {
+    background-color: #faf8f3;
+}
+
+body.light-mode main th,
+body.light-mode main td {
+    border-color: #d4cec3;
+}
+
+body.light-mode main td {
+    color: #292929;
+}
+
+body.light-mode main td:first-child {
+    color: #80640c;
+}
+
+/* MAIN PAGE - MOBILE */
+
+@media (max-width: 700px) {
+    main {
+        width: 92%;
+        padding: 20px 0;
+    }
+
+    main section {
+        padding: 40px 0;
+    }
+
+    main h1,
+    main h2 {
+        font-size: 24px;
+    }
+
+    main .negrito {
+        font-size: 16px;
+    }
+
+    main .summarymr2 {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    main th,
+    main td {
+        padding: 11px;
+        font-size: 12px;
+    }
 }
