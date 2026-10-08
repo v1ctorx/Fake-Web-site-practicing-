@@ -27,7 +27,7 @@ buttonmovie.addEventListener("click", function () {
 
 
 /// Parte do back-end
-fetch("http://localhost:3000/cars")
+fetch("https://cars-hub-api.onrender.com/cars")
     .then((response) => {
         return response.json();
     })
