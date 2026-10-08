@@ -26,8 +26,8 @@ buttonmovie.addEventListener("click", function () {
 });
 
 
-/// Parte do back-end
-fetch("https://cars-hub-api.onrender.com/cars")
+// Parte do back-end
+fetch("https://fake-web-site-practicing.onrender.com/cars")
     .then((response) => {
         return response.json();
     })
